@@ -118,6 +118,10 @@ El proyecto contiene 3 urls con vistas para ver contenido de los paquetes
 
     Descripción: Permite eliminar un paquete por su ID (1 es el ID en la url ejemplo).
 
+## Colección Insomnia (Y Postman)
+
+   Se encuentra el archivo JSON con la colección de los endpoints en la carpeta "insomnia_collection"
+
 ## Retos
 
 1. **Lambda**
