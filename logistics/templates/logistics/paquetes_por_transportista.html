@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Paquetes por Transportista</title>
+</head>
+<body>
+    <h1>Lista de Paquetes por Transportista</h1>
+    <p>Paquetes asignados a: {{ transportista.nombre }}</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Peso</th>
+                <th>Dimensiones</th>
+                <th>Dirección de Origen</th>
+                <th>Dirección de Destino</th>
+                <th>Estado de Entrega</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for paquete in paquetes %}
+            <tr>
+                <td>{{ paquete.id }}</td>
+                <td>{{ paquete.peso }}</td>
+                <td>{{ paquete.dimensiones }}</td>
+                <td>{{ paquete.direccion_origen }}</td>
+                <td>{{ paquete.direccion_destino }}</td>
+                <td>{{ paquete.estado_entrega }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No hay paquetes asignados a este transportista.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
